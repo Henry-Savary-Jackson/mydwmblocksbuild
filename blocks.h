@@ -7,6 +7,7 @@ static const Block blocks[] = {
      "curl wttr.in/?T | sed '4q;d' |gawk 'match($0, /([+-]?[0-9()]+) °C/, "
      "res){ print res[1] space \" °C\"}'",
      120, 0},
+    {"Network", "nmcli connection show | grep wifi | awk '{print $1}'", 10, 0},
     {"", "date '+%b %d (%a) %I:%M:%S%p'", 1, 0},
 };
 
