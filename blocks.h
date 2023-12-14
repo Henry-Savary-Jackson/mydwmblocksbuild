@@ -8,9 +8,11 @@ static const Block blocks[] = {
      "res){ print res[1] space \" °C\"}'",
      120, 0},
 
-    {"", "volumeinfo", 1, 0},
-    {"", "batteryinfo", 1, 0},
-    {"  ", "nmcli connection show | sed '2q;d' | awk '{print $1}'", 10, 0},
+    //{"", "volumeinfo", 1, 0},
+    // {"", "batteryinfo", 1, 0},
+    {"  ",
+     "iwctl station wlan0 show | grep 'Connected network' | awk '{print $3}'",
+     10, 0},
     {"", "date '+%b %d (%a) %I:%M:%S%p'", 1, 0},
 
 };
