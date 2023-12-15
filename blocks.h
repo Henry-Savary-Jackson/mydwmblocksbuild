@@ -3,11 +3,7 @@
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
     {"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g", 30, 0},
-    {"󰔏 ",
-     "curl wttr.in/?T | sed '4q;d' |gawk 'match($0, /([+-]?[0-9()]+) °C/, "
-     "res){ print res[1] space \" °C\"}'",
-     120, 0},
-
+    {"", "curl wttr.in/?format=1 ", 120, 0},
     //{"", "volumeinfo", 1, 0},
     // {"", "batteryinfo", 1, 0},
     {"  ",
