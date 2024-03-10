@@ -6,7 +6,6 @@ static const Block blocks[] = {
     {"", "curl wttr.in/?format=1 ", 120, 0},
     {"", "get_wifi_network", 10, 0},
     {"", "volumeinfo", 1, 0},
-    {"", "batteryinfo", 1, 0},
     {"", "date '+%b %d (%a) %I:%M:%S%p'", 1, 0},
 
 };
